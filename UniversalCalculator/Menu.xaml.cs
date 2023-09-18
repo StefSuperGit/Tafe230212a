@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,33 +28,42 @@ namespace Calculator
 			this.InitializeComponent();
 		}
 
-		
-		
+
+
 		// Startup for the menu
 		private void mathsCalculatorButton_Click(object sender, RoutedEventArgs e)
 		{
 			this.Frame.Navigate(typeof(MainPage));
 		}
 
+		private void mortgageCalculatorButton_Click(object sender, RoutedEventArgs e)
+		{
+			this.Frame.Navigate(typeof(MortgageCalculator));
+		}
+
+
 		// Buttons Code
 		/*
 		private void mortgageCalculatorButton_Click(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(Mortgage_Calculator_Page));
+			this.Frame.Navigate(typeof(MortgageCalculator));
 		}
+		*/
 
 		private void currencyConverterButton_Click(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(Currency_Calculator_Page));
+			this.Frame.Navigate(typeof(CurrencyConversionCalculator));
 		}
 
 		private void exitButton_Click(object sender, RoutedEventArgs e)
 		{
-			this.Frame.Navigate(typeof(MainMenu));
+			Application.Current.Exit();
 		}
 
-		*/
-
-
+		//private async void tripCalculatorButton_Click(object sender, RoutedEventArgs e)
+		//{
+		//	var dialogMessage = new MessageDialog("Trip calculator C# code will be developed later");
+		//	await dialogMessage.ShowAsync();
+		//}
 	}
 }
