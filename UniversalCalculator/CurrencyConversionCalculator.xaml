@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="Calculator.CurrencyConversionCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+		<!-- Divides page into two collumns. Column 0 will be used for data input and output and Column 2 as a display for background info and general information -->
+		<Grid.RowDefinitions >
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+
+
+		<StackPanel x:Name="Title" Grid.Row="0" VerticalAlignment="Center">
+				<TextBlock HorizontalAlignment="Center"  Margin="0,100,0,100" Text="Currency Conversion Calculator" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="42" FontWeight="Bold"/>
+			</StackPanel>
+
+			<StackPanel x:Name="Middle" Grid.Row="1" VerticalAlignment="Center">
+				<StackPanel Orientation="Horizontal">
+				<StackPanel>
+				<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Amount $" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="225" FontSize="24"/>
+					<TextBox x:Name="amountTextBox" HorizontalAlignment="Left" Margin="0,10,0,0" PlaceholderText="Enter amount" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Height="46" FontSize="26"/>
+			</StackPanel>
+			<StackPanel>
+				<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="From" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="225" FontSize="24"/>
+					<ComboBox x:Name="fromCurrencyBox" Margin="10,10,0,0" Width="225" Height="46" PlaceholderText="Select Currency" FontSize="26">
+						<ComboBoxItem Content="US Dollar"/>
+						<ComboBoxItem Content="Euro"/>
+						<ComboBoxItem Content="British Pound"/>
+						<ComboBoxItem Content="Indian Rupee"/>
+					</ComboBox>
+				</StackPanel>
+				<StackPanel>
+					<TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="To" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="225" FontSize="24"/>
+					<ComboBox x:Name="toCurrencyBox" Margin="10,10,0,0" Width="225" Height="46" PlaceholderText="Select Currency" FontSize="26">
+						<ComboBoxItem Content="US Dollar"/>
+						<ComboBoxItem Content="Euro"/>
+						<ComboBoxItem Content="British Pound"/>
+						<ComboBoxItem Content="Indian Rupee"/>
+					</ComboBox>
+				</StackPanel>
+			</StackPanel>
+			<StackPanel>
+				<TextBlock x:Name="selectedCurrencyTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" Text="1000 US Dollars =" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="500" FontSize="24"/>
+				<TextBlock x:Name="destinationCurrencyTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" Text="$728.72436000 British Pounds " TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="500" FontSize="24"/>
+				<TextBlock x:Name="comparrsionTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" Text="1 USD = 0.72872436 British Pounds" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="500" FontSize="24"/>
+				<TextBlock x:Name="comparrisonReversedTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" Text="1 Britsh Pound = 1.371907 USD" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="500" FontSize="24"/>
+			</StackPanel>
+		</StackPanel>
+		<StackPanel x:Name="Bottom" Grid.Row="2" VerticalAlignment="Center" >
+			<Button Content="Currency conversion" Margin="10,10,0,0" HorizontalAlignment="Center" Width="500" Height="125" FontSize="42" Click="Button_Click" />
+			<Button Content="Exit" Margin="10,10,0,0" HorizontalAlignment="Center" Width="250" Height="62.5" FontSize="42" Click="Button_Click_1"/>
+		</StackPanel>
+
+
+
+
+
+
+
+
+
+	</Grid>
+</Page>
