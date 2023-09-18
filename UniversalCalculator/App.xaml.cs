@@ -33,6 +33,7 @@ namespace Calculator
 					rootFrame.Navigate(typeof(Menu), e.Arguments);
 
 				Window.Current.Activate();
+
 			}
 		}
 

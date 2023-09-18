@@ -62,6 +62,7 @@ namespace Calculator
 
 		//private async void tripCalculatorButton_Click(object sender, RoutedEventArgs e)
 		//{
+
 		//	var dialogMessage = new MessageDialog("Trip calculator C# code will be developed later");
 		//	await dialogMessage.ShowAsync();
 		//}
